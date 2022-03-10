@@ -1,0 +1,17 @@
+{
+  "values" : [ {
+    "serviceId" : "maven"
+  }, {
+    "serviceId" : "init"
+  }, {
+    "serviceId" : "java-base"
+  }, {
+    "serviceId" : "springboot"
+  }, {
+    "serviceId" : "banner-ippon"
+  }, {
+    "serviceId" : "cassandra"
+  }, {
+    "serviceId" : "springboot-tomcat"
+  } ]
+}

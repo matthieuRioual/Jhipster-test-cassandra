@@ -71,6 +71,10 @@
       <version>0.23.0</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.datastax.oss</groupId>
+      <artifactId>java-driver-mapper-runtime</artifactId>
+    </dependency>
     <!-- Adding the engine dependency to the surefire-plugin unfortunately does not work in the current version. -->
     <!-- https://www.archunit.org/userguide/html/000_Index.html#_junit_5 -->
     <dependency>
@@ -181,6 +185,24 @@
         <configuration>
           <source>${java.version}</source>
           <target>${java.version}</target>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-configuration-processor</artifactId>
+              <version>${spring-boot.version}</version>
+            </path>
+            <path>
+              <groupId>org.mapstruct</groupId>
+              <artifactId>mapstruct-processor</artifactId>
+              <version>1.4.2.Final</version>
+            </path>
+            <path>
+              <groupId>com.datastax.oss</groupId>
+              <artifactId>java-driver-mapper-processor</artifactId>
+              <version>4.13.0</version>
+            </path>
+            <!-- jhipster-needle-maven-add-annotation-processor -->
+          </annotationProcessorPaths>
         </configuration>
       </plugin>
       <plugin>
